@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /*
       throws关键字：异常处理的第一种方式，交给别人处理
@@ -22,7 +23,12 @@ import java.io.FileNotFoundException;
         要么try。。。。catch自己处理异常
  */
 public class Demo05Throws {
-    public static void main(String[] args) {
+    /*
+    FileNotFoundException extends IOException extends Exception
+    声明时只要声明父类即可，所以，只要写Exception
+    不需要一个一个写
+     */
+    public static void main(String[] args) throws Exception {
         readFile("c:\\a.txt");
     }
     /*
@@ -32,10 +38,18 @@ public class Demo05Throws {
         FileNotFoundException是编译异常，抛出了编译异常，就必须处理这个异常
         可以使用throws继续声明抛出FileNotFoundException这个异常对象，让这个方法的调用者处理(方法名后面的throws。。。)
      */
-    public static  void readFile(String fileName) throws FileNotFoundException{
+    public static  void readFile(String fileName) throws Exception{
         if(!fileName.equals("c:\\a.txt")){
             throw new FileNotFoundException("传递的文件路径不是c:\\a.txt");
         }
+        /*
+        如果传递的对象不是txt结尾
+        抛出io异常，告知文件后缀名不对
+         */
+        if(!fileName.endsWith(".txt")){
+            throw new IOException("文件的后缀名不对");
+        }
+        System.out.println("路径没有问题，读取文件");
     }
 
 
