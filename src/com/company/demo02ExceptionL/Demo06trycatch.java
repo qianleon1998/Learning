@@ -1,4 +1,4 @@
-package com.company;
+package com.company.demo02ExceptionL;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -46,8 +46,8 @@ public class Demo06trycatch {
             e.printStackTrace();
         }
         System.out.println("后续代码");/*java.io.IOException: 文件的后缀名不对
-        at com.company.Demo06trycatch.readFile(Demo06trycatch.java:64)
-        at com.company.Demo06trycatch.main(Demo06trycatch.java:32)
+        at com.company.demo02ExceptionL.Demo06trycatch.readFile(Demo06trycatch.java:64)
+        at com.company.demo02ExceptionL.Demo06trycatch.main(Demo06trycatch.java:32)
     */
     }
 

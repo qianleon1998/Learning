@@ -1,4 +1,4 @@
-package com.company;
+package com.company.demo02ExceptionL;
     /*
     Objects类中的静态方法
     public static <T> T requireNonNull (T obj):查看指定引用对象不是null

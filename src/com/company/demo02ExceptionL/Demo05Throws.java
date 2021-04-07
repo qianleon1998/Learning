@@ -1,4 +1,4 @@
-package com.company;
+package com.company.demo02ExceptionL;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

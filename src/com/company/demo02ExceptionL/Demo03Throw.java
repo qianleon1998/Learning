@@ -1,4 +1,4 @@
-package com.company;
+package com.company.demo02ExceptionL;
 /*
 throw关键字
 作用：
